@@ -1,0 +1,21 @@
+# OS / Editor files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Logs
+logs/
+*.log
+
+# Build directories
+target/
+out/
+
+# Test reports
+surefire-reports/
+test-output/

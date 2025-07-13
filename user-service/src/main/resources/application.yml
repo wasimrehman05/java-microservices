@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: user-service
+
+server:
+  port: 8081
+
+# JWT Configuration - Shared secret for microservices communication  
+jwt:
+  secret: bankai-shared-jwt-secret-key-for-microservices-authentication-and-authorization-system
+
+logging:
+  file:
+    name: logs/user-service.log   # Log file path (relative to project root)
+    max-size: 10MB                # Max size before rotating
+    max-history: 10               # Retain rotated files for 10 days
+  level:
+    root: INFO                    # Default logging level
+
+# OpenAPI / Swagger Configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    try-it-out-enabled: true
+    operations-sorter: alpha
+    tags-sorter: alpha
+    doc-expansion: none
+    display-request-duration: true
+  show-actuator: true
